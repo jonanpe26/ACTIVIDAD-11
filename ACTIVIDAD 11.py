@@ -3,8 +3,8 @@ def quick_sort(lista):
         return lista
     else:
         pivote = lista[0]
-        menores = [x for x in lista[1:] if x.lower() <= pivote]
-        mayores = [x for x in lista[1:] if x.lower() > pivote]
+        menores = [x for x in lista[1:] if x <= pivote]
+        mayores = [x for x in lista[1:] if x > pivote]
         return quick_sort(menores) + [pivote] + quick_sort(mayores)
 n = int(input("cuantos nombres quiere ingresar"))
 nombres = []
